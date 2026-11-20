@@ -837,7 +837,7 @@ header.main-header.scrolled .header-sticky{
     position: relative;
     background-image: url('../images/hero-bg-image.jpg');
     align-content: end;
-    min-height: 95vh;
+    min-height: 100vh;
     padding: 220px 0 80px;
     margin-top: 20px;
     overflow: hidden;
