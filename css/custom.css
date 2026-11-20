@@ -85,6 +85,10 @@ html{
 	scroll-margin-top: 100px;
 }
 
+html{
+	zoom: 0.9;
+}
+
 html,
 body{
 	width: 100%;
