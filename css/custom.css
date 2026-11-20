@@ -266,7 +266,7 @@ a:focus{
 	content: '';
 	position: absolute;
 	top: 50%;
-    right: 24px;
+    right: 15px;
 	width: 24px;
 	height: 24px;
 	background-image: url('../images/arrow-white.svg');
