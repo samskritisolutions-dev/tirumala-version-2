@@ -28,6 +28,8 @@
 	<link rel="stylesheet" href="css/mousecursor.css">
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
+	<!-- Project Data Store -->
+	<script src="js/projects-data.js"></script>
 </head>
 <body>
 
@@ -171,7 +173,7 @@
                     <div class="project-single-content">
                         <!-- Page Single image Start -->
                         <div class="page-single-image">
-                            <figure class="image-anime reveal">
+                            <figure class="image-anime">
                                 <img id="project-hero-image" src="images/projects/image1.jpg" alt="Project Elevation">
                             </figure>
                         </div>
@@ -504,9 +506,21 @@
 
         // 3. Hero Elevation Image
         var heroImg = document.getElementById('project-hero-image');
-        if (heroImg && project.image) {
-            heroImg.src = project.image;
-            heroImg.alt = project.name + ' Elevation';
+        if (heroImg) {
+            if (project.image) {
+                heroImg.src = project.image;
+                heroImg.alt = project.name + ' Elevation';
+            }
+            heroImg.style.display = 'block';
+            heroImg.style.visibility = 'visible';
+            heroImg.style.opacity = '1';
+            var parentFig = heroImg.closest('figure');
+            if (parentFig) {
+                parentFig.style.visibility = 'visible';
+                parentFig.style.display = 'block';
+                parentFig.style.opacity = '1';
+                parentFig.classList.remove('reveal');
+            }
         }
 
         // 4. Project Overview
@@ -541,7 +555,7 @@
                 var v2 = k2 ? project.specs[k2] : null;
 
                 specsHtml += '<div class="project-challenges-item">';
-                specsHtml += '  <div class="project-challenges-image"><figure class="image-anime reveal"><img src="' + (i === 0 ? 'images/projects/project-challenges-image-1.jpg' : 'images/projects/project-challenges-image-2.jpg') + '" alt="' + k1 + '"></figure></div>';
+                specsHtml += '  <div class="project-challenges-image"><figure class="image-anime"><img src="' + (i === 0 ? 'images/projects/project-challenges-image-1.jpg' : 'images/projects/project-challenges-image-2.jpg') + '" alt="' + k1 + '"></figure></div>';
                 specsHtml += '  <div class="project-challenges-item-content wow fadeInUp">';
                 specsHtml += '    <div class="project-challenges-item-header"><h3>' + k1 + '</h3><p>' + v1 + '</p></div>';
                 if (k2 && v2) {

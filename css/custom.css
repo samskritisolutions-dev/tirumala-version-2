@@ -203,10 +203,8 @@ a:focus{
 
 .reveal{
 	position: relative;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    visibility: hidden;
+    display: block;
+    visibility: visible;
     overflow: hidden;
 }
 
@@ -3402,6 +3400,7 @@ header.main-header.scrolled .header-sticky{
 }
 
 .sidebar-cta-box{
+	position: relative;
 	border-radius: 20px;
 	overflow: hidden;
 }
