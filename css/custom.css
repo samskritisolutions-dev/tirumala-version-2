@@ -51,6 +51,7 @@
 :root{
 	--primary-color				: #0A192F;
 	--secondary-color			: #FFFFFF;
+    --third-color               : #FFB200;
 	--bg-color					: #F4F6FA;
 	--text-color				: #505E73;
 	--accent-color				: #0A192F;
@@ -79,7 +80,6 @@ html{
 #services,
 #projects,
 #contact,
-#blog,
 .our-faqs,
 .our-testimonials{
 	scroll-margin-top: 100px;
@@ -269,7 +269,7 @@ a:focus{
     right: 15px;
 	width: 24px;
 	height: 24px;
-	background-image: url('../images/arrow-white.svg');
+	background-image: url('../images/icons/arrow-white.svg');
 	background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -309,7 +309,7 @@ a:focus{
 }
 
 .btn-default.btn-highlighted::before{
-	background-image: url('../images/arrow-primary.svg');
+	background-image: url('../images/icons/arrow-primary.svg');
 }
 
 .readmore-btn{
@@ -328,7 +328,7 @@ a:focus{
     top: 50%;
     right: 0;
 	transform: translateY(-50%);
-	background-image: url('../images/arrow-primary.svg');
+	background-image: url('../images/icons/arrow-primary.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -413,7 +413,7 @@ a:focus{
 
 .dark-section{
 	background-color: var(--primary-color);
-	background-image: url('../images/dark-section-bg-image.png');
+	background-image: url('../images/backgrounds/dark-section-bg-image.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -500,6 +500,7 @@ a:focus{
 .section-title h1 span,
 .section-title h2 span{
 	font-style: italic;
+    color: var(--third-color);
 }
 
 .section-title p{
@@ -835,7 +836,7 @@ header.main-header.scrolled .header-sticky{
 
 .hero{
     position: relative;
-    background-image: url('../images/hero-bg-image.jpg');
+    background-image: url('../images/backgrounds/hero-bg-image.jpg');
     align-content: end;
     min-height: 105vh;
     padding: 220px 0 80px;
@@ -1724,7 +1725,7 @@ header.main-header.scrolled .header-sticky{
 
 .intro-video{
     position: relative;
-    background-image: url('../images/intro-video-bg-image.jpg');
+    background-image: url('../images/backgrounds/intro-video-bg-image.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2042,7 +2043,7 @@ header.main-header.scrolled .header-sticky{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: end;
-	background: url('../images/our-fact-image-box-bg.png') no-repeat;
+	background: url('../images/backgrounds/our-fact-image-box-bg.png') no-repeat;
 	background-position: bottom 30px left 57%;
 	background-size: auto;
 	margin-right: 20px;
@@ -2178,7 +2179,7 @@ header.main-header.scrolled .header-sticky{
 
 .cta-box{
 	position: relative;
-	background-image: url('../images/cta-box-bg-image.jpg');
+	background-image: url('../images/backgrounds/cta-box-bg-image.jpg');
 	padding: 100px 0;
 	overflow: hidden;
 }
@@ -2793,7 +2794,7 @@ header.main-header.scrolled .header-sticky{
 
 .page-header{
 	position: relative;
-	background-image: url('../images/page-header-bg.jpg');
+	background-image: url('../images/backgrounds/page-header-bg.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3269,7 +3270,7 @@ header.main-header.scrolled .header-sticky{
 
 .our-process-item.box-3{
     position: relative;
-    background-image: url('../images/our-procces-image-2.jpg');
+    background-image: url('../images/about/our-procces-image-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -3388,7 +3389,7 @@ header.main-header.scrolled .header-sticky{
     position: absolute;
     top: 0;
     right: 0;
-	background: url('../images/arrow-primary.svg') no-repeat;
+	background: url('../images/icons/arrow-primary.svg') no-repeat;
 	background-position: center center;
 	background-size: cover;
     width: 22px;
@@ -3835,7 +3836,7 @@ header.main-header.scrolled .header-sticky{
 }
 
 .post-entry blockquote{
-	background: var(--secondary-color) url('../images/icon-blockquote.svg');
+	background: var(--secondary-color) url('../images/icons/icon-blockquote.svg');
 	background-repeat: no-repeat;
 	background-position: 30px 30px;
     background-size: 45px;
@@ -6619,7 +6620,7 @@ header.main-header.scrolled .header-sticky{
 /************************************/
 
 .dark-section.dark-section-prime{
-    background-image: url('../images/dark-section-bg-image-prime.png');
+    background-image: url('../images/backgrounds/dark-section-bg-image-prime.png');
 }
 
 .hero-prime{
@@ -6630,7 +6631,7 @@ header.main-header.scrolled .header-sticky{
 }
 
 .hero-prime.dark-section.dark-section-prime{
-    background-image: url('../images/hero-bg-image-prime.jpg');
+    background-image: url('../images/backgrounds/hero-bg-image-prime.jpg');
 }
 
 .hero-prime::before{
@@ -6842,7 +6843,7 @@ header.main-header.scrolled .header-sticky{
 
 .about-us-image-box-1-prime{
     position: relative;
-    background: url('../images/about-image-bg-shape-prime.png') no-repeat;
+    background: url('../images/backgrounds/about-image-bg-shape-prime.png') no-repeat;
     background-position: bottom 50px left 140px;
     background-size: 135px auto;
     width: 78%;
@@ -7620,7 +7621,7 @@ header.main-header.scrolled .header-sticky{
 }
 
 .intro-video-prime.dark-section.dark-section-prime{
-    background-image: url('../images/intro-video-bg-prime.jpg');
+    background-image: url('../images/backgrounds/intro-video-bg-prime.jpg');
 }
 
 .intro-video-prime::before{
@@ -7770,8 +7771,8 @@ header.main-header.scrolled .header-sticky{
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	mask: url('../images/image-corner-bg-shape.svg');
-	-webkit-mask: url('../images/image-corner-bg-shape.svg');
+	mask: url('../images/backgrounds/image-corner-bg-shape.svg');
+	-webkit-mask: url('../images/backgrounds/image-corner-bg-shape.svg');
 	background-color: var(--bg-color);
 	mask-repeat: no-repeat;
 	mask-size: cover;
@@ -8896,7 +8897,7 @@ header.main-header.scrolled .header-sticky{
 
 .hero-metal{
     position: relative;
-    background-image: url('../images/hero-bg-image-metal.jpg');
+    background-image: url('../images/backgrounds/hero-bg-image-metal.jpg');
     background-position: center center;
     padding: 250px 0 0;
     margin-top: 20px;
@@ -9008,8 +9009,8 @@ header.main-header.scrolled .header-sticky{
     bottom: 0;
 	width: 20px;
     height: 20px;
-	mask: url('../images/image-corner-bg-shape.svg');
-	-webkit-mask: url('../images/image-corner-bg-shape.svg');
+	mask: url('../images/backgrounds/image-corner-bg-shape.svg');
+	-webkit-mask: url('../images/backgrounds/image-corner-bg-shape.svg');
 	background-color: var(--bg-color);
 	mask-repeat: no-repeat;
 	mask-size: cover;
@@ -10043,7 +10044,7 @@ header.main-header.scrolled .header-sticky{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: url('../images/arrow-primary.svg') no-repeat;
+	background: url('../images/icons/arrow-primary.svg') no-repeat;
     background-position: center center;
 	background-size: 20px auto;
 	transform: rotate(225deg);

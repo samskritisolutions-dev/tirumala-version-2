@@ -13,7 +13,7 @@
 	});
 
 	/* Fixed Header & Active Section Highlighting */	
-	var $sections = $('#home, #about, #services, #projects, #contact, #blog');
+	var $sections = $('#home, #about, #services, #projects, #contact');
 	var $navLinks = $('.main-menu .nav-link');
 
 	$window.on("scroll", function() {
