@@ -7,6 +7,16 @@
 	/* SmoothScroll */
 	const lenis = new Lenis({ autoRaf: true, wheelMultiplier: 1.5, touchMultiplier: 1.5 });
 
+	/* Synchronize Lenis scroll with GSAP ScrollTrigger & WOW.js */
+	if (typeof ScrollTrigger !== 'undefined') {
+		lenis.on('scroll', ScrollTrigger.update);
+	}
+	lenis.on('scroll', function() {
+		if (typeof wow !== 'undefined' && wow && wow.scrollHandler) {
+			wow.scrollHandler();
+		}
+	});
+
 	/* Preloader Effect */
 	$window.on('load', function(){
 		$(".preloader").fadeOut(600);
@@ -239,6 +249,7 @@
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: container,
+                    start: "top 90%",
                     toggleActions: "play none none none"
                 }
             });
@@ -280,7 +291,7 @@
 				el.anim = gsap.to(el.split.chars, {
 					scrollTrigger: {
 						trigger: el,
-						start: "top 92%",
+						start: "top 95%",
 						end: "top 60%",
 						markers: false,
 						scrub: 1,
@@ -299,18 +310,18 @@
 		if ($('.text-anime-style-1').length) {
 			let staggerAmount 	= 0.05,
 				translateXValue = 0,
-				delayValue 		= 0.5,
+				delayValue 		= 0.2,
 			   animatedTextElements = document.querySelectorAll('.text-anime-style-1');
 			
 			animatedTextElements.forEach((element) => {
 				let animationSplitText = new SplitText(element, { type: "chars, words" });
 					gsap.from(animationSplitText.words, {
-					duration: 1,
+					duration: 0.8,
 					delay: delayValue,
 					x: 20,
 					autoAlpha: 0,
 					stagger: staggerAmount,
-					scrollTrigger: { trigger: element, start: "top 85%" },
+					scrollTrigger: { trigger: element, start: "top 95%" },
 					});
 			});		
 		}
@@ -325,13 +336,13 @@
 			animatedTextElements.forEach((element) => {
 				let animationSplitText = new SplitText(element, { type: "chars, words" });
 					gsap.from(animationSplitText.chars, {
-						duration: 1,
+						duration: 0.8,
 						delay: delayValue,
 						x: translateXValue,
 						autoAlpha: 0,
 						stagger: staggerAmount,
 						ease: easeType,
-						scrollTrigger: { trigger: element, start: "top 85%"},
+						scrollTrigger: { trigger: element, start: "top 95%"},
 					});
 			});		
 		}
@@ -358,12 +369,12 @@
 				});
 
 				element.animation = gsap.to(element.split.chars, {
-					scrollTrigger: { trigger: element,	start: "top 90%" },
+					scrollTrigger: { trigger: element,	start: "top 95%" },
 					x: "0",
 					y: "0",
 					rotateX: "0",
 					opacity: 1,
-					duration: 1,
+					duration: 0.8,
 					ease: Back.easeOut,
 					stagger: 0.02,
 				});
@@ -454,7 +465,14 @@
 	/* Contact form validation end */
 
 	/* Animated Wow Js */	
-	new WOW().init();
+	var wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: true,
+		live: true
+	});
+	wow.init();
 
 	/* Popup Video */
 	if ($('.popup-video').length) {
